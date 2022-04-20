@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<!--
+        tagsV1.html - this is a file to test the use of tags in html as well as some beginning javascrip funtions.
+         The javascript functions tested are document.write() and alert().
+         Written by Zachary Cancasci.
+         zaccanca@uat.edu
+    -->
+
+<head>
+    <title>
+        Zachary Cancasci's UAT Space Page
+    </title>
+    <link href="style.css" rel="stylesheet">
+    <script src="code.js"></script>
+    <script src="classCode.js"></script>
+    <script src="launchDataDis.js"></script>
+    <script src="dataLoader.js"></script>
+    <script>
+        var theTime = new Date();
+        var tempTime = new Date();
+        var lastIteration = 0;
+        var time_interval = 5000;
+        var running = true;
+        var index = 0;
+        var timet;
+
+        //gets data into the array
+        var data = getData();
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <td>
+            <img src="UATspaceLogo-1.jpg">
+        </td>
+        <td>
+            <h1>
+                UAT Space Program
+            </h1>
+        </td>
+    </table>
+    <table id="data" border="2" width="70%">
+        <col style="width: 35%">
+        <col style="width: 35%">
+        <thead>
+            <tr id="tableHdr">
+                <th>Data type</th>
+                <th>Reading</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr id="seconds"></tr>
+            <tr id="latitude"></tr>
+            <tr id="longitude"></tr>
+            <tr id="gpsSensor_alt"></tr>
+            <tr id="bmpSensor_alt"></tr>
+            <tr id="bmpSensor_pres"></tr>
+            <tr id="bmpSensor_temp"></tr>
+            <tr id="digSensor_temp"></tr>
+            <tr id="cssSensor_temp"></tr>
+            <tr id="cssSensor_eCO2"></tr>
+            <tr id="cssSensor_TVOC"></tr>
+            <tr id="UV"></tr>
+            <tr id="accelX"></tr>
+            <tr id="accelY"></tr>
+            <tr id="accelZ"></tr>
+            <tr id="magneticX"></tr>
+            <tr id="magneticY"></tr>
+            <tr id="magneticZ"></tr>
+            <tr id="gyroX"></tr>
+            <tr id="gyroY"></tr>
+            <tr id="gyroZ"></tr>
+        </tbody>
+    </table>
+    <br>
+    The current time is: <div id="timeStamp">Press start for current time</div>
+    <br>
+    <br>
+
+    <button id="startButton" onclick="Start();" class="SSButton">
+        <!--This is the button for the timer-->
+        Start
+    </button>
+
+    <button id="stopButton" onclick="Stop();" class="SSButton">
+        Stop
+    </button>
+    <br>
+    <br>
+    <h2 id="blink">Let's play Craps!!!</h2>
+    <!--Craps Header and other Craps text-->
+    <script type="text/javascript">
+        var blink = document.getElementById("blink");
+        setInterval(function () {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 600);
+    </script>
+    <!--These are the ids for craps-->
+    <div id="crapsRes">Craps Results</div>
+    <div id="die1Res">Result for die1</div>
+    <div id="die2Res">Result for die2</div>
+    <div id="sumRes">Sum of the two dice</div>
+    <br>
+    <button onclick="playCraps();" class="button">Play Craps</button>
+    <!--This is the button to play Craps-->
+    <br>
+    <br>
+    Number of wins: <div id="wins">0</div>
+    <!--Displays Wins-->
+    Number of losses: <div id="losses">0</div>
+    <!--Displays Losses-->
+    Number of ties: <div id="ties">0</div>
+    <!--Displays Ties-->
+    <br>
+    <br>
+    <button class="lgButton" onclick="playStation();">Play space Station music</button>
+    <br>
+    <br>
+    <br>
+    <script>
+        var springLaunch = new Mission("To boldly go...", 19, 25, "May", 2023, "Fiona", 3);
+        var fallLaunch = new Mission("To go again", 25, 13, "November", 2022, "Polaris", 2);
+    </script>
+    <button onclick="runSpDisplay()" class="lgButton">Spring mission parameters</button>
+    <button onclick="spLaunch()" class="lgButton">Start Spring Launch</button>
+    <br>
+    <br>
+    <button onclick="runFallDisplay()" class="lgButton">Fall mission parameters</button>
+    <button onclick="faLaunch()" class="lgButton">Start Fall Launch</button>
+    <br>
+    <br>
+    &lt;
+    <a href="./index.html">My Landing Page</a> |
+    <a href="./contact.html">My Contact Page</a> |
+    <a href="./boards.html">My Boards Page</a>
+    &gt;
+</body>
+
+</html>

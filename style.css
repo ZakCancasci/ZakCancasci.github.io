@@ -1,0 +1,45 @@
+body{
+    background-color:lightblue;
+    background-image: linear-gradient(90deg, white, green);
+    font-family: "Sofia", sans-serif;
+}
+
+#blink {
+    font-size: 20px;
+    font: bold;
+    color: red;
+    transition: 0.5s;
+}
+
+.button{
+    background-color: white;
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+    border-color: blue;
+}
+
+.SSButton{
+    background-color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    border-color: purple;
+}
+
+#tableHdr{
+    font-family: fantasy;
+    font-size: 1.75em;
+}
+
+.lgButton{
+    background-color: white;
+    width: 200px;
+    height: 35px;
+    border-radius: 30px;
+    border-color:firebrick;
+}
+
+#data {
+    background-image: linear-gradient(180deg, white, rgba(1, 148, 1, 0.493));
+}
