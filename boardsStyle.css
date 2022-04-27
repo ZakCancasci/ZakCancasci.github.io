@@ -1,3 +1,44 @@
 body{
     background-color: lightskyblue;
 }
+
+header{
+    width: 100%;
+    color: firebrick;
+    text-align: center;
+    padding: 5px;
+}
+
+nav{
+    line-height: 30px;
+    height: 400px;
+    width: 125px;
+    padding: 5px;
+    float: left;
+}
+
+footer{
+    text-align: center;
+    height: 10%;
+    width: 100%;
+    clear: both;
+}
+
+main{
+    margin-right: 100px;
+}
+
+aside{
+    width: 25%;
+    height: 400px;
+    float: right;
+    padding: 5px;
+}
+
+#clrflText{
+    color: firebrick;
+}
+
+#fixMargin{
+    margin-left: 140px;
+}
